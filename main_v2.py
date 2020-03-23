@@ -36,23 +36,20 @@ class BinarySearchTest(unittest.TestCase):
 
     def test_case_04(self):
         # Kiểm thử với mảng có 999 phần tử
-        arr = [random.random() for _ in range(999)]
-        arr.sort()
-        search_value = arr[30]
-        self.assertEqual(binarySearch(arr, 0, search_value), 30)
+        arr = range(999)
+        search_value = arr[29]
+        self.assertEqual(binarySearch(arr, 0, search_value), 29)
 
     def test_case_05(self):
         # Kiểm thử với mảng có 1000 phần tử
-        arr = [random.random() for _ in range(1000)]
-        arr.sort()
-        search_value = arr[30]
-        self.assertEqual(binarySearch(arr, 0, search_value), 30)
+        arr = range(1000)
+        search_value = arr[89]
+        self.assertEqual(binarySearch(arr, 0, search_value), 89)
     
     def test_case_06(self):
-        # Kiểm thử với mảng có 1000 phần tử
-        arr = [random.random() for _ in range(1001)]
-        arr.sort()
-        search_value = arr[30]
+        # Kiểm thử với mảng có 1001 phần tử
+        arr = range(1001)
+        search_value = arr[99]
         self.assertEqual(binarySearch(arr, 0, search_value), -1)
 
     def test_case_07(self):
